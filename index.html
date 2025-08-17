@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مطعم الشهد النبراوي - المنيو والأسعار</title>
+    <meta name="description" content="مطعم الشهد النبراوي - أشهى الأطباق العربية والأكلات الشعبية. فول، كشري، كريب، ساندوتشات، مشويات. اطلب الآن من أفضل مطعم في النبراوي">
+    <meta name="keywords" content="مطعم الشهد النبراوي, مطعم عربي, فول, كشري, كريب, ساندوتشات, مشويات, النبراوي, طعام عربي">
+    <meta name="author" content="مطعم الشهد النبراوي">
+    <meta property="og:title" content="مطعم الشهد النبراوي - المنيو والأسعار">
+    <meta property="og:description" content="أشهى الأطباق العربية والأكلات الشعبية في مطعم الشهد النبراوي">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="./src/alshahd.png">
+    <link rel="canonical" href="">
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "مطعم الشهد النبراوي",
+        "description": "أشهى الأطباق العربية والأكلات الشعبية في النبراوي",
+        "url": "",
+        "telephone": "+201005259181",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "النبراوي",
+            "addressRegion": "مصر"
+        },
+        "servesCuisine": ["مطبخ عربي", "طعام شعبي", "فول", "كشري", "كريب"],
+        "priceRange": "$$",
+        "image": "./src/alshahd.png",
+        "openingHours": "Mo-Su 00:00-23:59"
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="dns-prefetch" href="https://wa.me">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'cairo': ['Cairo', 'sans-serif']
+                    },
+                    colors: {
+                        'restaurant-red': '#dc2626',
+                        'restaurant-dark': '#991b1b',
+                        'restaurant-light': '#fee2e2'
+                    },
+
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .menu-card {
+            transition: transform 0.2s ease;
+        }
+        .menu-card:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-white font-cairo">
+    <!-- Logo Section -->
+    <div class="bg-white py-6 border-b border-gray-100">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex flex-col items-center">
+                <img src="./src/alshahd.png" alt="مطعم الشهد النبراوي - شعار المطعم" class="logo h-24 md:h-32 w-auto mb-3">
+                <h1 class="text-xl md:text-2xl font-bold text-gray-800 leading-tight">
+                    مطعم الشهد النبراوي
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-center">
+                <a href="https://wa.me/201005259181" 
+                   class="bg-restaurant-red hover:bg-red-700 text-white font-semibold py-3 px-8 rounded-lg shadow-lg transition-colors duration-200 text-center text-lg">
+                    اطلب الآن
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Hero Section -->
+        <section class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-restaurant-red mb-6">
+                مرحباً بكم في مطعم الشهد النبراوي
+            </h2>
+            <p class="text-lg md:text-xl text-gray-600 mb-8">
+                أشهى الأطباق العربية والأكلات الشعبية
+            </p>
+            <div class="bg-restaurant-red text-white py-3 px-8 rounded-full inline-block mb-8">
+                <span class="text-lg font-semibold">📞 01005259181</span>
+            </div>
+        </section>
+
+        <!-- Search and Filter Section -->
+        <section class="mb-8">
+            <div class="max-w-md mx-auto">
+                <div class="relative">
+                    <input type="text" 
+                           id="menuSearch" 
+                           placeholder="ابحث في المنيو..." 
+                           aria-label="البحث في قائمة الطعام"
+                           class="w-full py-3 px-4 pr-12 rounded-xl border-2 border-gray-200 focus:border-restaurant-red focus:outline-none focus:ring-2 focus:ring-restaurant-light transition-all duration-200">
+                    <div class="absolute inset-y-0 right-0 flex items-center pr-3">
+                        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-3 mt-6">
+                <button onclick="filterMenu('all')" class="filter-btn active bg-restaurant-red text-white px-4 py-2 rounded-lg transition-all duration-200">
+                    الكل
+                </button>
+                <button onclick="filterMenu('فول')" class="filter-btn bg-gray-200 text-gray-700 hover:bg-restaurant-red hover:text-white px-4 py-2 rounded-lg transition-all duration-200">
+                    الفول والفلافل
+                </button>
+                <button onclick="filterMenu('كشري')" class="filter-btn bg-gray-200 text-gray-700 hover:bg-restaurant-red hover:text-white px-4 py-2 rounded-lg transition-all duration-200">
+                    الكشري والمكرونة
+                </button>
+                <button onclick="filterMenu('كريب')" class="filter-btn bg-gray-200 text-gray-700 hover:bg-restaurant-red hover:text-white px-4 py-2 rounded-lg transition-all duration-200">
+                    الكريب
+                </button>
+                <button onclick="filterMenu('ساندوتش')" class="filter-btn bg-gray-200 text-gray-700 hover:bg-restaurant-red hover:text-white px-4 py-2 rounded-lg transition-all duration-200">
+                    الساندوتشات
+                </button>
+                <button onclick="filterMenu('مشوي')" class="filter-btn bg-gray-200 text-gray-700 hover:bg-restaurant-red hover:text-white px-4 py-2 rounded-lg transition-all duration-200">
+                    المشويات
+                </button>
+            </div>
+        </section>
+
+        <!-- Menu Sections -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8" id="menuContainer">
+            
+            <!-- الفول والفلافل -->
+            <section class="menu-card bg-white rounded-xl shadow-sm p-6 border border-gray-100" data-category="فول">
+                <div class="text-center mb-6">
+                    <h3 class="text-2xl font-bold text-restaurant-red mb-2">🥙 الفول والفلافل</h3>
+                    <div class="w-16 h-1 bg-restaurant-red mx-auto rounded"></div>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                        <span class="text-gray-800">سندوتش فول</span>
+                        <span class="font-semibold text-restaurant-red">6 جنيه</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                        <span class="text-gray-800">سندوتش طعمية</span>
+                        <span class="font-semibold text-restaurant-red">6 جنيه</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                        <span class="text-gray-800">سندوتش بطاطس</span>
+                        <span class="font-semibold text-restaurant-red">6 جنيه</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                        <span class="text-gray-800">سندوتش ميكس</span>
+                        <span class="font-semibold text-restaurant-red">6 جنيه</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                        <span class="text-gray-800">طلب فول صالة عادي</span>
+                        <span class="font-semibold text-restaurant-red">35 جنيه</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2">
+                        <span class="text-gray-800">طلب فول كامل</span>
+                        <span class="font-semibold text-restaurant-red">40 جنيه</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- الكشري والمكرونة -->
+            <section class="menu-card bg-white rounded-xl shadow-sm p-6 border border-gray-100" data-category="كشري">
+                <div class="text-center mb-6">
+                    <h3 class="text-2xl font-bold text-restaurant-red mb-2">🍲 الكشري والمكرونة</h3>
+                    <div class="w-16 h-1 bg-restaurant-red mx-auto rounded"></div>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                        <span class="text-gray-800">كشري صغير</span>
+                        <span class="font-semibold text-restaurant-red">20 جنيه</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                        <span class="text-gray-800">كشري كبير</span>
+                        <span class="font-semibold text-restaurant-red">25 جنيه</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                        <span class="text-gray-800">كشري كبدة صغير</span>
+                        <span class="font-semibold text-restaurant-red">35 جنيه</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                        <span class="text-gray-800">كشري كبدة كبير</span>
+                        <span class="font-semibold text-restaurant-red">45 جنيه</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                        <span class="text-gray-800">مكرونة كبدة صغير</span>
+                        <span class="font-semibold text-restaurant-red">35 جنيه</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                        <span class="text-gray-800">مكرونة كبدة كبير</span>
+                        <span class="font-semibold text-restaurant-red">45 جنيه</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                        <span class="text-gray-800">كشري لحمة مفرومة صغير</span>
+                        <span class="font-semibold text-restaurant-red">35 جنيه</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2">
+                        <span class="text-gray-800">كشري لحمة مفرومة كبير</span>
+                        <span class="font-semibold text-restaurant-red">45 جنيه</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- الكريب -->
+            <section class="menu-card bg-white rounded-xl shadow-sm p-6 border border-gray-100" data-category="كريب">
+                <div class="text-center mb-6">
+                    <h3 class="text-2xl font-bold text-restaurant-red mb-2">🌯 الكريب</h3>
+                    <div class="w-16 h-1 bg-restaurant-red mx-auto rounded"></div>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                        <span class="text-gray-800">بطاطس موزاريلا</span>
+                        <span class="font-semibold text-restaurant-red">60 جنيه</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                        <span class="text-gray-800">بانيه</span>
+                        <span class="font-semibold text-restaurant-red">90 جنيه</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                        <span class="text-gray-800">كرسبي</span>
+                        <span class="font-semibold text-restaurant-red">90 جنيه</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                        <span class="text-gray-800">استربس</span>
+                        <span class="font-semibold text-restaurant-red">100 جنيه</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                        <span class="text-gray-800">زنجر</span>
+                        <span class="font-semibold text-restaurant-red">100 جنيه</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                        <span class="text-gray-800">نوتيلا</span>
+                        <span class="font-semibold text-restaurant-red">100 جنيه</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                        <span class="text-gray-800">فواكه</span>
+                        <span class="font-semibold text-restaurant-red">100 جنيه</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                        <span class="text-gray-800">مشكل لحوم</span>
+                        <span class="font-semibold text-restaurant-red">140 جنيه</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                        <span class="text-gray-800">مشكل فراخ</span>
+                        <span class="font-semibold text-restaurant-red">140 جنيه</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                        <span class="text-gray-800">مكس جبن</span>
+                        <span class="font-semibold text-restaurant-red">120 جنيه</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2">
+                        <span class="text-gray-800">إضافة جبنة / كونو</span>
+                        <span class="font-semibold text-restaurant-red">15 جنيه</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- الساندوتشات -->
+            <section class="menu-card bg-white rounded-xl shadow-sm p-6 border border-gray-100" data-category="ساندوتش">
+                <div class="text-center mb-6">
+                    <h3 class="text-2xl font-bold text-restaurant-red mb-2">🥪 الساندوتشات</h3>
+                    <div class="w-16 h-1 bg-restaurant-red mx-auto rounded"></div>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                        <span class="text-gray-800">كبده اسكندراني</span>
+                        <span class="font-semibold text-restaurant-red">25 جنيه</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                        <span class="text-gray-800">لحمة مفرومة</span>
+                        <span class="font-semibold text-restaurant-red">35 جنيه</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                        <span class="text-gray-800">شاورما</span>
+                        <span class="font-semibold text-restaurant-red">70 جنيه</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                        <span class="text-gray-800">فراخ بانيه</span>
+                        <span class="font-semibold text-restaurant-red">60 جنيه</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                        <span class="text-gray-800">زنجر</span>
+                        <span class="font-semibold text-restaurant-red">60 جنيه</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                        <span class="text-gray-800">استربس</span>
+                        <span class="font-semibold text-restaurant-red">60 جنيه</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                        <span class="text-gray-800">برجر</span>
+                        <span class="font-semibold text-restaurant-red">55 جنيه</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2">
+                        <span class="text-gray-800">تشيز برجر</span>
+                        <span class="font-semibold text-restaurant-red">70 جنيه</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- المشويات -->
+            <section class="menu-card bg-white rounded-xl shadow-sm p-6 border border-gray-100" data-category="مشوي">
+                <div class="text-center mb-6">
+                    <h3 class="text-2xl font-bold text-restaurant-red mb-2">🍗 المشويات</h3>
+                    <div class="w-16 h-1 bg-restaurant-red mx-auto rounded"></div>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                        <span class="text-gray-800">فرخة شواية</span>
+                        <span class="font-semibold text-restaurant-red">220 جنيه</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                        <span class="text-gray-800">فرخة فحم</span>
+                        <span class="font-semibold text-restaurant-red">250 جنيه</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                        <span class="text-gray-800">فراخ شيش</span>
+                        <span class="font-semibold text-restaurant-red">130 جنيه</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                        <span class="text-gray-800">كفتة فحم</span>
+                        <span class="font-semibold text-gray-500">——</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2">
+                        <span class="text-gray-800">تسوية فراخ</span>
+                        <span class="font-semibold text-restaurant-red">60 / 70 جنيه</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Call to Action -->
+        <section class="text-center mt-16 mb-12">
+            <div class="bg-gradient-to-r from-restaurant-red to-red-600 rounded-2xl p-8 text-white">
+                <h3 class="text-2xl md:text-3xl font-bold mb-4">اطلب الآن من مطعم الشهد النبراوي</h3>
+                <p class="text-lg mb-6">أشهى الأطباق العربية والأكلات الشعبية</p>
+                <a href="https://wa.me/201005259181" 
+                   class="bg-white text-restaurant-red font-bold py-4 px-8 rounded-lg shadow-lg hover:bg-gray-100 transition-colors duration-200 text-lg">
+                    🚀 ابدأ الطلب الآن
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center md:text-right">
+                    <h4 class="text-xl font-bold mb-4 text-restaurant-red">مطعم الشهد النبراوي</h4>
+                    <p class="text-gray-300">أشهى الأطباق العربية والأكلات الشعبية</p>
+                </div>
+                <div class="text-center">
+                    <h4 class="text-xl font-bold mb-4 text-restaurant-red">معلومات التواصل</h4>
+                    <p class="text-gray-300 mb-2">📞 01005259181</p>
+                    <p class="text-gray-300">📍 كافيتيريا الخليج بجوار كافيتيريا البراد</p>
+                </div>
+                <div class="text-center md:text-left">
+                    <h4 class="text-xl font-bold mb-4 text-restaurant-red">موقعنا</h4>
+                    <a href="https://maps.app.goo.gl/UwS9TRWJdbFz1WAM9" 
+                       target="_blank"
+                       class="inline-block bg-restaurant-red hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
+                        شوف موقعنا
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">© 2025 مطعم الشهد النبراوي - جميع الحقوق محفوظة</p>
+                <p class="text-gray-500 text-xs mt-2">Developed by Ziad Ayman | 01016522661</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Buttons -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <!-- Quick Order Button -->
+        <button onclick="showQuickOrder()" 
+                aria-label="فتح قائمة الطلب السريع"
+                class="mb-3 bg-restaurant-red hover:bg-restaurant-dark text-white p-3 rounded-full shadow-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-restaurant-light">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+            </svg>
+        </button>
+        
+        <!-- WhatsApp Button -->
+        <a href="https://wa.me/201005259181" 
+           aria-label="التواصل عبر واتساب"
+           class="block bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-green-300">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+            </svg>
+        </a>
+    </div>
+
+    <script>
+        // Enhanced functionality for menu search and filtering
+        let menuData = [];
+        let currentFilter = 'all';
+
+        // Initialize the app
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeMenu();
+            setupSearchFunctionality();
+            setupAnimations();
+            setupPriceCalculator();
+        });
+
+        function initializeMenu() {
+            // Collect all menu items for search functionality
+            const menuSections = document.querySelectorAll('[data-category]');
+            menuSections.forEach(section => {
+                const category = section.dataset.category;
+                const items = section.querySelectorAll('.flex.justify-between');
+                items.forEach(item => {
+                    const name = item.querySelector('span:first-child').textContent;
+                    const price = item.querySelector('span:last-child').textContent;
+                    menuData.push({
+                        name: name,
+                        price: price,
+                        category: category,
+                        element: section
+                    });
+                });
+            });
+        }
+
+        function setupSearchFunctionality() {
+            const searchInput = document.getElementById('menuSearch');
+            searchInput.addEventListener('input', function(e) {
+                const searchTerm = e.target.value.toLowerCase().trim();
+                filterMenuBySearch(searchTerm);
+            });
+        }
+
+        function filterMenuBySearch(searchTerm) {
+            const sections = document.querySelectorAll('[data-category]');
+            sections.forEach(section => {
+                const items = section.querySelectorAll('.flex.justify-between');
+                let hasVisibleItems = false;
+                
+                items.forEach(item => {
+                    const itemName = item.querySelector('span:first-child').textContent.toLowerCase();
+                    if (itemName.includes(searchTerm)) {
+                        item.style.display = 'flex';
+                        hasVisibleItems = true;
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+                
+                // Show/hide entire section based on visible items
+                if (hasVisibleItems || searchTerm === '') {
+                    section.style.display = 'block';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        }
+
+        function filterMenu(category) {
+            currentFilter = category;
+            const sections = document.querySelectorAll('[data-category]');
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            
+            // Update button states
+            filterButtons.forEach(btn => {
+                btn.classList.remove('active', 'bg-restaurant-red', 'text-white');
+                btn.classList.add('bg-gray-200', 'text-gray-700');
+            });
+            
+            event.target.classList.add('active', 'bg-restaurant-red', 'text-white');
+            event.target.classList.remove('bg-gray-200', 'text-gray-700');
+            
+            // Filter sections
+            sections.forEach(section => {
+                if (category === 'all' || section.dataset.category.includes(category)) {
+                    section.style.display = 'block';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+            
+            // Clear search when filtering
+            document.getElementById('menuSearch').value = '';
+        }
+
+        function setupAnimations() {
+            // No animations - simplified
+        }
+
+        function setupPriceCalculator() {
+            // Add click listeners to menu items for price calculation
+            let totalPrice = 0;
+            let selectedItems = [];
+
+            document.querySelectorAll('.flex.justify-between').forEach(item => {
+                item.style.cursor = 'pointer';
+                item.addEventListener('click', function() {
+                    const itemName = this.querySelector('span:first-child').textContent;
+                    const priceText = this.querySelector('span:last-child').textContent;
+                    const price = parseInt(priceText.match(/\\d+/)) || 0;
+                    
+                    this.classList.toggle('bg-restaurant-light');
+                    
+                    if (this.classList.contains('bg-restaurant-light')) {
+                        selectedItems.push({name: itemName, price: price});
+                        totalPrice += price;
+                    } else {
+                        selectedItems = selectedItems.filter(selected => selected.name !== itemName);
+                        totalPrice -= price;
+                    }
+                    
+                    updateCartDisplay();
+                });
+            });
+        }
+
+        function updateCartDisplay() {
+            // Remove existing cart display
+            const existingCart = document.getElementById('cartDisplay');
+            if (existingCart) existingCart.remove();
+            
+            if (selectedItems.length > 0) {
+                const cartHTML = `
+                    <div id="cartDisplay" class="fixed bottom-20 left-4 right-4 bg-white border-2 border-restaurant-red rounded-xl p-4 shadow-lg z-40">
+                        <div class="flex justify-between items-center mb-2">
+                            <h4 class="font-bold text-restaurant-red">طلبك الحالي</h4>
+                            <button onclick="clearCart()" class="text-gray-500 hover:text-red-500">✕</button>
+                        </div>
+                        <div class="max-h-32 overflow-y-auto mb-3">
+                            ${selectedItems.map(item => `
+                                <div class="flex justify-between text-sm">
+                                    <span>${item.name}</span>
+                                    <span>${item.price} جنيه</span>
+                                </div>
+                            `).join('')}
+                        </div>
+                        <div class="border-t pt-2 flex justify-between font-bold">
+                            <span>المجموع:</span>
+                            <span class="text-restaurant-red">${totalPrice} جنيه</span>
+                        </div>
+                        <button onclick="sendOrder()" class="w-full mt-3 bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg transition-colors">
+                            إرسال الطلب عبر واتساب
+                        </button>
+                    </div>
+                `;
+                document.body.insertAdjacentHTML('beforeend', cartHTML);
+            }
+        }
+
+        function clearCart() {
+            selectedItems = [];
+            totalPrice = 0;
+            document.querySelectorAll('.bg-restaurant-light').forEach(item => {
+                item.classList.remove('bg-restaurant-light');
+            });
+            document.getElementById('cartDisplay').remove();
+        }
+
+        function sendOrder() {
+            if (selectedItems.length === 0) return;
+            
+            let message = 'سلام عليكم عايز اطلب:\n\n';
+            selectedItems.forEach(item => {
+                const formattedName = formatItemName(item.name);
+                message += `• ${formattedName} - ${item.price} جنيه\n`;
+            });
+            
+            const whatsappUrl = `https://wa.me/201005259181?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        function showLocation() {
+            // Enhanced location display with map option
+            const locationHTML = `
+                <div class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+                    <div class="bg-white rounded-xl p-6 max-w-md w-full ">
+                        <div class="text-center mb-4">
+                            <h3 class="text-xl font-bold text-restaurant-red mb-2">موقعنا</h3>
+                            <p class="text-gray-700">كافيتيريا الخليج بجوار كافيتيريا البراد</p>
+                        </div>
+                        <div class="flex gap-3">
+                            <button onclick="closeLocationModal()" class="flex-1 bg-gray-200 text-gray-700 py-2 rounded-lg">
+                                إغلاق
+                            </button>
+                            <button onclick="openInGoogleMaps()" class="flex-1 bg-restaurant-red text-white py-2 rounded-lg">
+                                فتح في الخرائط
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            document.body.insertAdjacentHTML('beforeend', locationHTML);
+        }
+
+        function closeLocationModal() {
+            document.querySelector('.fixed.inset-0').remove();
+        }
+
+        function openInGoogleMaps() {
+            const googleMapsUrl = 'https://maps.app.goo.gl/UwS9TRWJdbFz1WAM9';
+            window.open(googleMapsUrl, '_blank');
+            closeLocationModal();
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Enhanced quick order with cart functionality
+        let quickOrderCart = [];
+        let quickOrderTotal = 0;
+        
+        function showQuickOrder() {
+            const quickOrderHTML = `
+                <div class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+                    <div class="bg-white rounded-xl p-6 max-w-lg w-full max-h-[85vh] overflow-hidden flex flex-col">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold text-restaurant-red">طلب سريع</h3>
+                            <button onclick="closeQuickOrder()" class="text-gray-500 hover:text-red-500 text-xl">✕</button>
+                        </div>
+                        
+                        <!-- Quick Cart Display -->
+                        <div id="quickCartDisplay" class="mb-4 p-3 bg-gray-50 rounded-lg" style="display: none;">
+                            <h4 class="font-bold text-restaurant-red mb-2">طلبك الحالي:</h4>
+                            <div id="quickCartItems" class="max-h-20 overflow-y-auto space-y-1 text-sm mb-2"></div>
+                            <div class="flex justify-between font-bold text-restaurant-red border-t pt-2">
+                                <span>المجموع:</span>
+                                <span id="quickCartTotal">0 جنيه</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Category Tabs -->
+                        <div class="flex flex-wrap gap-2 mb-4 border-b pb-3">
+                            <button onclick="showQuickCategory('فول')" class="quick-cat-btn active px-3 py-1 text-sm bg-restaurant-red text-white rounded">الفول</button>
+                            <button onclick="showQuickCategory('كشري')" class="quick-cat-btn px-3 py-1 text-sm bg-gray-200 text-gray-700 rounded">الكشري</button>
+                            <button onclick="showQuickCategory('كريب')" class="quick-cat-btn px-3 py-1 text-sm bg-gray-200 text-gray-700 rounded">الكريب</button>
+                            <button onclick="showQuickCategory('ساندوتش')" class="quick-cat-btn px-3 py-1 text-sm bg-gray-200 text-gray-700 rounded">الساندوتشات</button>
+                            <button onclick="showQuickCategory('مشوي')" class="quick-cat-btn px-3 py-1 text-sm bg-gray-200 text-gray-700 rounded">المشويات</button>
+                        </div>
+                        
+                        <!-- Menu Items Container -->
+                        <div id="quickOrderItems" class="flex-1 overflow-y-auto space-y-2 mb-4">
+                            ${getQuickOrderItems('فول')}
+                        </div>
+                        
+                        <!-- Action Buttons -->
+                        <div class="flex gap-3">
+                            <button onclick="clearQuickCart()" class="flex-1 bg-gray-200 text-gray-700 py-2 px-4 rounded-lg font-semibold">
+                                مسح الطلب
+                            </button>
+                            <button onclick="sendQuickOrder()" id="sendQuickOrderBtn" class="flex-2 bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg font-semibold" disabled>
+                                إرسال الطلب
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            document.body.insertAdjacentHTML('beforeend', quickOrderHTML);
+        }
+        
+        function getQuickOrderItems(category) {
+            const menuItems = {
+                'فول': [
+                    {name: 'سندوتش فول', price: 6, category: 'فول'},
+                    {name: 'سندوتش طعمية', price: 6, category: 'فول'},
+                    {name: 'سندوتش بطاطس', price: 6, category: 'فول'},
+                    {name: 'سندوتش ميكس', price: 6, category: 'فول'},
+                    {name: 'طلب فول صالة عادي', price: 35, category: 'فول'},
+                    {name: 'طلب فول كامل', price: 40, category: 'فول'}
+                ],
+                'كشري': [
+                    {name: 'كشري صغير', price: 20, category: 'كشري'},
+                    {name: 'كشري كبير', price: 25, category: 'كشري'},
+                    {name: 'كشري كبدة صغير', price: 35, category: 'كشري'},
+                    {name: 'كشري كبدة كبير', price: 45, category: 'كشري'},
+                    {name: 'مكرونة كبدة صغير', price: 35, category: 'كشري'},
+                    {name: 'مكرونة كبدة كبير', price: 45, category: 'كشري'},
+                    {name: 'كشري لحمة مفرومة صغير', price: 35, category: 'كشري'},
+                    {name: 'كشري لحمة مفرومة كبير', price: 45, category: 'كشري'}
+                ],
+                'كريب': [
+                    {name: 'بطاطس موزاريلا', price: 60, category: 'كريب'},
+                    {name: 'بانيه', price: 90, category: 'كريب'},
+                    {name: 'كرسبي', price: 90, category: 'كريب'},
+                    {name: 'استربس', price: 100, category: 'كريب'},
+                    {name: 'زنجر', price: 100, category: 'كريب'},
+                    {name: 'نوتيلا', price: 100, category: 'كريب'},
+                    {name: 'فواكه', price: 100, category: 'كريب'},
+                    {name: 'مشكل لحوم', price: 140, category: 'كريب'},
+                    {name: 'مشكل فراخ', price: 140, category: 'كريب'},
+                    {name: 'مكس جبن', price: 120, category: 'كريب'},
+                    {name: 'إضافة جبنة / كونو', price: 15, category: 'كريب'}
+                ],
+                'ساندوتش': [
+                    {name: 'كبده اسكندراني', price: 25, category: 'ساندوتش'},
+                    {name: 'لحمة مفرومة', price: 35, category: 'ساندوتش'},
+                    {name: 'شاورما', price: 70, category: 'ساندوتش'},
+                    {name: 'فراخ بانيه', price: 60, category: 'ساندوتش'},
+                    {name: 'زنجر', price: 60, category: 'ساندوتش'},
+                    {name: 'استربس', price: 60, category: 'ساندوتش'},
+                    {name: 'برجر', price: 55, category: 'ساندوتش'},
+                    {name: 'تشيز برجر', price: 70, category: 'ساندوتش'}
+                ],
+                'مشوي': [
+                    {name: 'فرخة شواية', price: 220, category: 'مشوي'},
+                    {name: 'فرخة فحم', price: 250, category: 'مشوي'},
+                    {name: 'فراخ شيش', price: 130, category: 'مشوي'},
+                    {name: 'تسوية فراخ', price: 60, category: 'مشوي'}
+                ]
+            };
+            
+            const items = menuItems[category] || [];
+            return items.map(item => `
+                <button onclick="addToQuickCart('${item.name}', ${item.price}, '${item.category}')" 
+                        class="w-full text-right p-3 bg-gray-50 hover:bg-restaurant-red hover:text-white rounded-lg transition-colors flex justify-between items-center">
+                    <span class="font-medium">${item.name}</span>
+                    <span class="text-restaurant-red font-bold">${item.price} جنيه</span>
+                </button>
+            `).join('');
+        }
+        
+        function showQuickCategory(category) {
+            // Update active button
+            document.querySelectorAll('.quick-cat-btn').forEach(btn => {
+                btn.classList.remove('active', 'bg-restaurant-red', 'text-white');
+                btn.classList.add('bg-gray-200', 'text-gray-700');
+            });
+            
+            event.target.classList.add('active', 'bg-restaurant-red', 'text-white');
+            event.target.classList.remove('bg-gray-200', 'text-gray-700');
+            
+            // Update items
+            document.getElementById('quickOrderItems').innerHTML = getQuickOrderItems(category);
+        }
+
+        function addToQuickCart(itemName, price, category) {
+            // Check if item already exists in cart
+            const existingItem = quickOrderCart.find(item => item.name === itemName);
+            
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                quickOrderCart.push({
+                    name: itemName,
+                    price: price,
+                    quantity: 1,
+                    category: category
+                });
+            }
+            
+            updateQuickCartDisplay();
+        }
+        
+        function updateQuickCartDisplay() {
+            const cartDisplay = document.getElementById('quickCartDisplay');
+            const cartItems = document.getElementById('quickCartItems');
+            const cartTotal = document.getElementById('quickCartTotal');
+            const sendBtn = document.getElementById('sendQuickOrderBtn');
+            
+            if (quickOrderCart.length === 0) {
+                cartDisplay.style.display = 'none';
+                sendBtn.disabled = true;
+                sendBtn.classList.add('opacity-50');
+                return;
+            }
+            
+            cartDisplay.style.display = 'block';
+            sendBtn.disabled = false;
+            sendBtn.classList.remove('opacity-50');
+            
+            // Calculate total
+            quickOrderTotal = quickOrderCart.reduce((total, item) => total + (item.price * item.quantity), 0);
+            
+            // Update cart items display
+            cartItems.innerHTML = quickOrderCart.map(item => `
+                <div class="flex justify-between items-center">
+                    <span>${item.name} ${item.quantity > 1 ? `(×${item.quantity})` : ''}</span>
+                    <div class="flex items-center gap-2">
+                        <span>${item.price * item.quantity} جنيه</span>
+                        <button onclick="removeFromQuickCart('${item.name}')" class="text-red-500 hover:text-red-700 text-xs">✕</button>
+                    </div>
+                </div>
+            `).join('');
+            
+            cartTotal.textContent = `${quickOrderTotal} جنيه`;
+        }
+        
+        function removeFromQuickCart(itemName) {
+            quickOrderCart = quickOrderCart.filter(item => item.name !== itemName);
+            updateQuickCartDisplay();
+        }
+        
+        function clearQuickCart() {
+            quickOrderCart = [];
+            quickOrderTotal = 0;
+            updateQuickCartDisplay();
+        }
+        
+        function sendQuickOrder() {
+            if (quickOrderCart.length === 0) return;
+            
+            let message = 'سلام عليكم عايز اطلب:\n\n';
+            quickOrderCart.forEach(item => {
+                const formattedName = formatItemName(item.name, item.category);
+                if (item.quantity > 1) {
+                    message += `• ${formattedName} (×${item.quantity}) - ${item.price * item.quantity} جنيه\n`;
+                } else {
+                    message += `• ${formattedName} - ${item.price} جنيه\n`;
+                }
+            });
+            
+            const whatsappUrl = `https://wa.me/201005259181?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+            
+            // Clear cart and close modal
+            clearQuickCart();
+            closeQuickOrder();
+        }
+        
+        function formatItemName(itemName, category = null) {
+            // Use category to determine prefix
+            if (category === 'كريب') {
+                return `كريب ${itemName}`;
+            } else if (category === 'ساندوتش') {
+                return `ساندوتش ${itemName}`;
+            }
+            
+            return itemName;
+        }
+
+        function closeQuickOrder() {
+            // Reset cart when closing
+            quickOrderCart = [];
+            quickOrderTotal = 0;
+            document.querySelector('.fixed.inset-0').remove();
+        }
+    </script>
+</body>
+</html>

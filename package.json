@@ -1,0 +1,16 @@
+{
+  "name": "alshahd-restaurant",
+  "version": "1.0.0",
+  "description": "مطعم الشهد النبراوي - Restaurant Website",
+  "main": "index.html",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build:prod": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  },
+  "keywords": ["restaurant", "arabic", "menu", "tailwind"],
+  "author": "مطعم الشهد النبراوي",
+  "license": "MIT"
+}
